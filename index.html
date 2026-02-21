@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <meta name="theme-color" content="#e5e7eb"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+  <meta name="apple-mobile-web-app-title" content="Planner"/>
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Planner v1</title>
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="left">
+        <div class="title" id="titleToday">TODAY</div>
+        <div class="sub" id="subHint">Tap + to add</div>
+      </div>
+      <div class="right">
+        <div class="count" id="countText">0/24</div>
+        <button class="topbtn" id="lockBtn" aria-label="Lock"><svg class="icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22 30v-6c0-6 4-10 10-10s10 4 10 10v6" stroke="#6b7280" stroke-width="4" fill="none" stroke-linecap="round"/>
+<rect x="20" y="30" width="24" height="20" rx="6" fill="#e5e7eb" stroke="#6b7280" stroke-width="3"/>
+<path d="M32 40v6" stroke="#6b7280" stroke-width="4" stroke-linecap="round"/></svg></button>
+        <button class="topbtn" id="settingsBtn" aria-label="Settings"><svg class="icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M32 20l2 4 5 1-3 4 1 5-5-1-4 3-4-3-5 1 1-5-3-4 5-1 2-4z" fill="#d1d5db" stroke="#6b7280" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="32" cy="32" r="6" fill="#f3f4f6" stroke="#6b7280" stroke-width="3"/></svg></button>
+      </div>
+    </header>
+
+    <main class="grid-wrap">
+      <div class="grid" id="grid" aria-label="Planner grid"></div>
+      <div class="grid-lines" aria-hidden="true"></div>
+    </main>
+
+    <div class="sheet scrim hidden" id="picker" role="dialog" aria-modal="true">
+      <div class="card">
+        <div class="row">
+          <div class="card-title" id="pickerTitle">Choose</div>
+          <button class="icon-btn" id="pickerClose" aria-label="Close">✕</button>
+        </div>
+        <div class="hint" id="pickerHint"></div>
+        <div class="icon-grid" id="iconGrid"></div>
+      </div>
+    </div>
+
+    <div class="sheet scrim hidden" id="settings" role="dialog" aria-modal="true">
+      <div class="card">
+        <div class="row">
+          <div class="card-title" id="settingsTitle">Settings</div>
+          <button class="icon-btn" id="settingsClose" aria-label="Close">✕</button>
+        </div>
+
+        <div class="setrow">
+          <div class="setlabel" id="langLabel">Language</div>
+          <div class="seg">
+            <button class="segbtn" data-lang="en" id="langEN">EN</button>
+            <button class="segbtn" data-lang="ru" id="langRU">RU</button>
+          </div>
+        </div>
+
+        <div class="setrow">
+          <div class="setlabel" id="themeLabel">Theme</div>
+          <div class="seg">
+            <button class="segbtn" data-theme="light" id="themeLight" aria-label="Light theme">☀️</button>
+            <button class="segbtn" data-theme="dark" id="themeDark" aria-label="Dark theme">🌙</button>
+          </div>
+        </div>
+
+        <div class="setnote" id="privacyNote">Offline. No account. No ads.</div>
+      </div>
+    </div>
+  </div>
+
+<script src="app.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js').catch(()=>{});
+  }
+</script>
+</body>
+</html>
