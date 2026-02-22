@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planner Final</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="left">
+    <h1 id="title">НА СЕГОДНЯ</h1>
+  </div>
+  <div class="right">
+    <span id="counter">0/36</span>
+    <button id="lockBtn" class="iconBtn">🔓</button>
+    <button id="settingsBtn" class="iconBtn">⚙</button>
+  </div>
+</header>
+
+<div id="grid" class="grid"></div>
+
+<!-- Picker -->
+<div id="picker" class="modal hidden">
+  <div class="modalContent">
+    <h2 id="pickerTitle">Выберите задачу</h2>
+    <div id="taskList" class="taskList"></div>
+  </div>
+</div>
+
+<!-- Settings -->
+<div id="settings" class="modal hidden">
+  <div class="modalContent">
+    <h2>Настройки</h2>
+    <div class="row">
+      <span>Язык</span>
+      <div>
+        <button id="ruBtn">RU</button>
+        <button id="enBtn">EN</button>
+      </div>
+    </div>
+    <div class="row">
+      <span>Тема</span>
+      <div>
+        <button id="lightBtn">☀</button>
+        <button id="darkBtn">🌙</button>
+      </div>
+    </div>
+    <div class="row">
+      <span>Средняя выполняемость</span>
+      <div id="avgBox">0%</div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
