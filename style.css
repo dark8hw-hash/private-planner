@@ -1,0 +1,16 @@
+
+body{margin:0;font-family:sans-serif;background:#e4e7ec;color:#111}
+.dark{background:#2f2f2f;color:#fff}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px}
+.controls button{margin-left:6px;padding:8px 12px;font-size:16px;border:none;border-radius:8px}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:repeat(12,85px);gap:8px;padding:12px}
+.block{border-radius:14px;padding:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:18px;text-align:center;color:#fff;cursor:pointer}
+.block small{font-size:12px;margin-top:4px}
+.completed{opacity:0.4}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center}
+.modal{background:#fff;padding:20px;border-radius:16px;width:90%;max-width:400px;max-height:80%;overflow:auto}
+.dark .modal{background:#3a3a3a}
+.hidden{display:none}
+.taskList{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.taskBtn{padding:10px;border-radius:10px;border:none;cursor:pointer}
+.row{display:flex;justify-content:space-between;margin-top:14px}
