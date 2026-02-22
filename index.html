@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div>
+    <h1 id="title">НА СЕГОДНЯ</h1>
+    <div id="avgBox">AVG: 0%</div>
+  </div>
+  <div>
+    <span id="counter">0/36</span>
+    <button id="lockBtn">🔓</button>
+    <button id="settingsBtn">⚙</button>
+  </div>
+</header>
+
+<div id="grid" class="grid"></div>
+
+<div id="settings" class="settings hidden">
+  <h2>Настройки</h2>
+  <div>
+    <button id="ruBtn">RU</button>
+    <button id="enBtn">EN</button>
+  </div>
+  <div>
+    <button id="lightBtn">☀</button>
+    <button id="darkBtn">🌙</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
